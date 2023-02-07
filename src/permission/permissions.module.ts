@@ -10,6 +10,6 @@ import { UniqueValidatorPipe } from '../common/pipes/unique-validator.pipe';
   imports: [TypeOrmModule.forFeature([PermissionRepository]), AuthModule],
   exports: [PermissionsService],
   controllers: [PermissionsController],
-  providers: [PermissionsService, UniqueValidatorPipe]
+  providers: [PermissionsService, PermissionRepository, UniqueValidatorPipe]
 })
 export class PermissionsModule {}

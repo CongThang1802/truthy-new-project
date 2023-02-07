@@ -13,6 +13,7 @@ import { AuthService } from './auth.service';
 import { UniqueValidatorPipe } from '../common/pipes/unique-validator.pipe';
 import { JwtStrategy } from '../common/strategy/jwt.strategy';
 import { JwtTwoFactorStrategy } from '../common/strategy/jwt-two-factor.strategy';
+import { RefreshTokenRepository } from '../refresh-token/refresh-token.repository';
 
 const throttleConfig = config.get<any>('throttle.login');
 const redisConfig = config.get<any>('queue');
@@ -60,7 +61,8 @@ const LoginThrottleFactory = {
     JwtTwoFactorStrategy,
     JwtStrategy,
     UniqueValidatorPipe,
-    LoginThrottleFactory
+    LoginThrottleFactory,
+    UserRepository
   ],
   exports: [
     AuthService,

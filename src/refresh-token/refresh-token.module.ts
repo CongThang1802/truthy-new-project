@@ -9,7 +9,7 @@ import { RefreshTokenService } from './refresh-token.service';
     forwardRef(() => AuthModule),
     TypeOrmModule.forFeature([RefreshTokenRepository])
   ],
-  providers: [RefreshTokenService],
+  providers: [RefreshTokenService, RefreshTokenRepository],
   exports: [RefreshTokenService],
   controllers: []
 })

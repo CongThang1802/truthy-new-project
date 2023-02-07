@@ -40,7 +40,7 @@ export default class CreatePermissionSeed {
   assignResourceAndConcatPermission(
     modules: ModulesPayloadInterface | SubModulePayloadInterface,
     resource: string,
-    isDefault?: false
+    isDefault = false
   ) {
     if (modules.permissions) {
       for (const permission of modules.permissions) {

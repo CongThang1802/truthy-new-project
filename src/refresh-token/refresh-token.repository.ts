@@ -1,16 +1,20 @@
-import { EntityRepository } from 'typeorm';
+import { DataSource, EntityRepository } from 'typeorm';
 import * as config from 'config';
 import { RefreshToken } from './entities/refresh-token.entity';
 import { BaseRepository } from '../common/repository/base.repository';
 import { RefreshTokenSerializer } from './serializer/refresh-token.serializer';
 import { UserSerializer } from '../auth/serializer/user.serializer';
+import { Injectable } from '@nestjs/common';
 
 const tokenConfig = config.get<any>('jwt');
-@EntityRepository(RefreshToken)
+@Injectable()
 export class RefreshTokenRepository extends BaseRepository<
   RefreshToken,
   RefreshTokenSerializer
 > {
+  constructor(dataSource: DataSource) {
+    super(RefreshToken, dataSource);
+  }
   /**
    * Create refresh token
    * @param user

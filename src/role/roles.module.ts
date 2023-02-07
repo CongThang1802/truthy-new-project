@@ -15,6 +15,6 @@ import { UniqueValidatorPipe } from '../common/pipes/unique-validator.pipe';
   ],
   exports: [],
   controllers: [RolesController],
-  providers: [RolesService, UniqueValidatorPipe]
+  providers: [RolesService, RoleRepository, UniqueValidatorPipe]
 })
 export class RolesModule {}

@@ -13,6 +13,10 @@ import { UniqueValidatorPipe } from '../common/pipes/unique-validator.pipe';
   ],
   exports: [EmailTemplateService],
   controllers: [EmailTemplateController],
-  providers: [EmailTemplateService, UniqueValidatorPipe]
+  providers: [
+    EmailTemplateService,
+    EmailTemplateRepository,
+    UniqueValidatorPipe
+  ]
 })
 export class EmailTemplateModule {}

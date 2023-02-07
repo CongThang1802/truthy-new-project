@@ -1,4 +1,4 @@
-import { EntityRepository } from 'typeorm';
+import { DataSource, EntityRepository } from 'typeorm';
 import { classToPlain, plainToClass } from 'class-transformer';
 import { RoleEntity } from './entities/role.entity';
 import { BaseRepository } from '../common/repository/base.repository';
@@ -6,9 +6,13 @@ import { RoleSerializer } from './serializer/role.serializer';
 import { CreateRoleDto } from './dto/create-role.dto';
 import { PermissionEntity } from '../permission/entities/permission.entity';
 import { UpdateRoleDto } from './dto/update-role.dto';
+import { Injectable } from '@nestjs/common';
 
-@EntityRepository(RoleEntity)
+@Injectable()
 export class RoleRepository extends BaseRepository<RoleEntity, RoleSerializer> {
+  constructor(dataSource: DataSource) {
+    super(RoleEntity, dataSource);
+  }
   async store(
     createRoleDto: CreateRoleDto,
     permissions: PermissionEntity[]

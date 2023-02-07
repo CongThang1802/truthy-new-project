@@ -1,4 +1,4 @@
-import { DeepPartial, EntityRepository } from 'typeorm';
+import { DeepPartial, EntityRepository, DataSource } from 'typeorm';
 import * as bcrypt from 'bcrypt';
 import { classToPlain, plainToClass } from 'class-transformer';
 import { UserEntity } from './entity/user.entity';
@@ -9,9 +9,13 @@ import { UserLoginDto } from './dto/user-login.dto';
 import { ExceptionTitleList } from '../common/constants/exception-title-list.constants';
 import { StatusCodesList } from '../common/constants/status-codes-list.constants';
 import { ResetPasswordDto } from './dto/reset-password.dto';
+import { Injectable } from '@nestjs/common';
 
-@EntityRepository(UserEntity)
+@Injectable()
 export class UserRepository extends BaseRepository<UserEntity, UserSerializer> {
+  constructor(dataSource: DataSource) {
+    super(UserEntity, dataSource);
+  }
   /**
    * store new user
    * @param createUserDto

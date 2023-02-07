@@ -24,11 +24,15 @@ export default class CreateUserSeed {
       .values([
         {
           username: 'admin',
-          email: 'admin@truthy.com',
+          email: 'admin@tgreenapp.com',
           password:
-            '$2b$10$O9BWip02GuE14bDPfBomQebCjwKQyuUfkulhvBB1UoizOeKxGG8Fu', // Truthy@123
-          salt: '$2b$10$O9BWip02GuE14bDPfBomQe',
-          name: 'truthy',
+            '$2b$10$GSB8xgFRbTDcm0j0X3yFNeowJp2/6qnQ9DHoF61RRWNzj5CKAayky', // Greenapp@123
+          salt: '$2b$10$GSB8xgFRbTDcm0j0X3yFNe',
+          name: 'GreenApp',
+          address: 'Korean',
+          contact: '',
+          avatar: '',
+          token: '',
           status: UserStatusEnum.ACTIVE,
           roleId: role.id
         }

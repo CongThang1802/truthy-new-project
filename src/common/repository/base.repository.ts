@@ -5,8 +5,10 @@ import {
   ILike,
   ObjectLiteral,
   FindOptionsWhere,
-  Repository
+  Repository,
+  DataSource
 } from 'typeorm';
+import { EntityTarget } from 'typeorm/common/EntityTarget';
 import { QueryDeepPartialEntity } from 'typeorm/query-builder/QueryPartialEntity';
 
 import { NotFoundException } from '../../exception/not-found.exception';
@@ -22,6 +24,9 @@ export class BaseRepository<
   T,
   K extends ModelSerializer
 > extends Repository<T> {
+  constructor(target: EntityTarget<T>, dataSource: DataSource) {
+    super(target, dataSource.createEntityManager());
+  }
   /***
    * get entity by id
    * @param id
