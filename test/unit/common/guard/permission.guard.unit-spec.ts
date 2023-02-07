@@ -1,9 +1,8 @@
 import { Test, TestingModule } from '@nestjs/testing';
-
-import { PermissionGuard } from 'src/common/guard/permission.guard';
-import { UserEntity } from 'src/auth/entity/user.entity';
-import { RoleEntity } from 'src/role/entities/role.entity';
-import { PermissionEntity } from 'src/permission/entities/permission.entity';
+import { PermissionGuard } from '../../../../src/common/guard/permission.guard';
+import { PermissionEntity } from '../../../../src/permission/entities/permission.entity';
+import { RoleEntity } from '../../../../src/role/entities/role.entity';
+import { UserEntity } from '../../../../src/auth/entity/user.entity';
 
 describe('Permission guard test', () => {
   let permissionGuard;

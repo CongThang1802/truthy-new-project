@@ -9,11 +9,11 @@ import {
 } from 'typeorm';
 import { QueryDeepPartialEntity } from 'typeorm/query-builder/QueryPartialEntity';
 
-import { NotFoundException } from 'src/exception/not-found.exception';
-import { Pagination } from 'src/paginate';
-import { PaginationInfoInterface } from 'src/paginate/pagination-info.interface';
-import { SearchFilterInterface } from 'src/common/interfaces/search-filter.interface';
-import { ModelSerializer } from 'src/common/serializer/model.serializer';
+import { NotFoundException } from '../../exception/not-found.exception';
+import { ModelSerializer } from '../serializer/model.serializer';
+import { SearchFilterInterface } from '../interfaces/search-filter.interface';
+import { PaginationInfoInterface } from '../../paginate/pagination-info.interface';
+import { Pagination } from '../../paginate';
 
 /**
  * Base Repository for code reuse

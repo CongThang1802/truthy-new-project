@@ -1,7 +1,6 @@
 import { Test } from '@nestjs/testing';
-
-import { RefreshTokenRepository } from 'src/refresh-token/refresh-token.repository';
-import { UserSerializer } from 'src/auth/serializer/user.serializer';
+import { RefreshTokenRepository } from '../../../src/refresh-token/refresh-token.repository';
+import { UserSerializer } from '../../../src/auth/serializer/user.serializer';
 
 const mockRefreshToken = {
   id: 1,

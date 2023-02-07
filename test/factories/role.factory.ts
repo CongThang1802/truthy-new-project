@@ -1,7 +1,7 @@
 import { faker } from '@faker-js/faker';
 
-import { RoleEntity } from 'src/role/entities/role.entity';
 import { appDataSource } from '../../src/config/ormconfig';
+import { RoleEntity } from '../../src/role/entities/role.entity';
 
 export class RoleFactory {
   static new() {

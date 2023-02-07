@@ -2,23 +2,22 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { JwtService } from '@nestjs/jwt';
 import * as bcrypt from 'bcrypt';
 import { UnprocessableEntityException } from '@nestjs/common';
-
-import { AuthService } from 'src/auth/auth.service';
-import { UserRepository } from 'src/auth/user.repository';
-import { CreateUserDto } from 'src/auth/dto/create-user.dto';
-import { UserLoginDto } from 'src/auth/dto/user-login.dto';
-import { UserEntity } from 'src/auth/entity/user.entity';
-import { UpdateUserProfileDto } from 'src/auth/dto/update-user-profile.dto';
-import { ResetPasswordDto } from 'src/auth/dto/reset-password.dto';
-import { ForgetPasswordDto } from 'src/auth/dto/forget-password.dto';
-import { UserStatusEnum } from 'src/auth/user-status.enum';
-import { ChangePasswordDto } from 'src/auth/dto/change-password.dto';
-import { MailService } from 'src/mail/mail.service';
-import { RefreshTokenService } from 'src/refresh-token/refresh-token.service';
-import { UserSerializer } from 'src/auth/serializer/user.serializer';
-import { NotFoundException } from 'src/exception/not-found.exception';
-import { CustomHttpException } from 'src/exception/custom-http.exception';
-import { RefreshPaginateFilterDto } from 'src/refresh-token/dto/refresh-paginate-filter.dto';
+import { UserStatusEnum } from '../../../src/auth/user-status.enum';
+import { AuthService } from '../../../src/auth/auth.service';
+import { UserRepository } from '../../../src/auth/user.repository';
+import { RefreshTokenService } from '../../../src/refresh-token/refresh-token.service';
+import { MailService } from '../../../src/mail/mail.service';
+import { ForgetPasswordDto } from '../../../src/auth/dto/forget-password.dto';
+import { ResetPasswordDto } from '../../../src/auth/dto/reset-password.dto';
+import { NotFoundException } from '../../../src/exception/not-found.exception';
+import { ChangePasswordDto } from '../../../src/auth/dto/change-password.dto';
+import { UserEntity } from '../../../src/auth/entity/user.entity';
+import { CustomHttpException } from '../../../src/exception/custom-http.exception';
+import { UserSerializer } from '../../../src/auth/serializer/user.serializer';
+import { CreateUserDto } from '../../../src/auth/dto/create-user.dto';
+import { UserLoginDto } from '../../../src/auth/dto/user-login.dto';
+import { UpdateUserProfileDto } from '../../../src/auth/dto/update-user-profile.dto';
+import { RefreshPaginateFilterDto } from '../../../src/refresh-token/dto/refresh-paginate-filter.dto';
 
 const mockUserRepository = () => ({
   findOne: jest.fn(),

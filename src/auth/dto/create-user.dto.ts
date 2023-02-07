@@ -1,8 +1,7 @@
 import { IsIn, IsNumber } from 'class-validator';
 import { OmitType } from '@nestjs/swagger';
-
-import { UserStatusEnum } from 'src/auth/user-status.enum';
-import { RegisterUserDto } from 'src/auth/dto/register-user.dto';
+import { RegisterUserDto } from './register-user.dto';
+import { UserStatusEnum } from '../user-status.enum';
 
 const statusEnumArray = [
   UserStatusEnum.ACTIVE,

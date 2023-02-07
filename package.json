@@ -25,6 +25,7 @@
     "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js --config src/config/ormconfig.ts",
     "orm-create": "npm run typeorm migration:create -- -n",
     "migrate": "npx typeorm-ts-node-commonjs migration:run -d ./src/config/ormconfig.ts",
+    "generate": "npx typeorm-ts-node-commonjs migration:generate ./src/database/migrations/%npm_config_name% -d ./src/config/ormconfig.ts",
     "migration:rollback": "npm run typeorm migration:revert",
     "seed": "ts-node -r tsconfig-paths/register ./node_modules/typeorm-seeding/dist/cli.js seed -n src/config/ormconfig.ts",
     "precommit": "lint-staged && npm run lint",

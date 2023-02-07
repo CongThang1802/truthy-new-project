@@ -4,9 +4,8 @@ import { Test } from '@nestjs/testing';
 import { ThrottlerStorageRedisService } from 'nestjs-throttler-storage-redis';
 import { RateLimiterRedis } from 'rate-limiter-flexible';
 import Redis, { Redis as TypeRedis } from 'ioredis';
-
-import { AppModule } from 'src/app.module';
-import { appDataSource } from 'src/config/ormconfig';
+import { AppModule } from '../../src/app.module';
+import { appDataSource } from '../../src/config/ormconfig';
 
 export class AppFactory {
   private constructor(

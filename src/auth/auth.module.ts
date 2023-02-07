@@ -4,16 +4,15 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { JwtModule } from '@nestjs/jwt';
 import Redis, { Redis as TypeRedis } from 'ioredis';
 import * as config from 'config';
-
-import { AuthController } from 'src/auth/auth.controller';
-import { AuthService } from 'src/auth/auth.service';
-import { UserRepository } from 'src/auth/user.repository';
-import { UniqueValidatorPipe } from 'src/common/pipes/unique-validator.pipe';
-import { MailModule } from 'src/mail/mail.module';
 import { RateLimiterRedis } from 'rate-limiter-flexible';
-import { RefreshTokenModule } from 'src/refresh-token/refresh-token.module';
-import { JwtTwoFactorStrategy } from 'src/common/strategy/jwt-two-factor.strategy';
-import { JwtStrategy } from 'src/common/strategy/jwt.strategy';
+import { UserRepository } from './user.repository';
+import { AuthController } from './auth.controller';
+import { MailModule } from '../mail/mail.module';
+import { RefreshTokenModule } from '../refresh-token/refresh-token.module';
+import { AuthService } from './auth.service';
+import { UniqueValidatorPipe } from '../common/pipes/unique-validator.pipe';
+import { JwtStrategy } from '../common/strategy/jwt.strategy';
+import { JwtTwoFactorStrategy } from '../common/strategy/jwt-two-factor.strategy';
 
 const throttleConfig = config.get<any>('throttle.login');
 const redisConfig = config.get<any>('queue');

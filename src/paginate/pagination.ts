@@ -1,4 +1,5 @@
-import { PaginationResultInterface } from 'src/paginate/pagination.results.interface';
+import { PaginationResultInterface } from './pagination.results.interface';
+
 export class Pagination<PaginationEntity> {
   public results: PaginationEntity[];
   public currentPage: number;

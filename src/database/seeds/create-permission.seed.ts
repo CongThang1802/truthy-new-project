@@ -1,14 +1,13 @@
 import { Factory } from 'typeorm-seeding';
 import { DataSource } from 'typeorm';
-
 import {
   ModulesPayloadInterface,
   PermissionConfiguration,
   PermissionPayload,
   RoutePayloadInterface,
   SubModulePayloadInterface
-} from 'src/config/permission-config';
-import { PermissionEntity } from 'src/permission/entities/permission.entity';
+} from '../../config/permission-config';
+import { PermissionEntity } from '../../permission/entities/permission.entity';
 
 export default class CreatePermissionSeed {
   permissions: RoutePayloadInterface[] = [];

@@ -1,10 +1,10 @@
 import { Test } from '@nestjs/testing';
 
-import { JwtStrategy } from 'src/common/strategy/jwt.strategy';
-import { UserRepository } from 'src/auth/user.repository';
-import { UserEntity } from 'src/auth/entity/user.entity';
-import { JwtPayloadDto } from 'src/auth/dto/jwt-payload.dto';
-import { UnauthorizedException } from 'src/exception/unauthorized.exception';
+import { UnauthorizedException } from '../../../../src/exception/unauthorized.exception';
+import { JwtStrategy } from '../../../../src/common/strategy/jwt.strategy';
+import { UserRepository } from '../../../../src/auth/user.repository';
+import { UserEntity } from '../../../../src/auth/entity/user.entity';
+import { JwtPayloadDto } from '../../../../src/auth/dto/jwt-payload.dto';
 
 const mockUserRepository = () => ({
   findOne: jest.fn()

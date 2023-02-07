@@ -2,8 +2,8 @@ import { Injectable } from '@nestjs/common';
 import { ValidatorConstraint } from 'class-validator';
 import { DataSource } from 'typeorm';
 
-import { AbstractUniqueValidator } from 'src/common/pipes/abstract-unique-validator';
 import { InjectDataSource } from '@nestjs/typeorm/dist/common/typeorm.decorators';
+import { AbstractUniqueValidator } from './abstract-unique-validator';
 
 /**
  * unique validator pipe

@@ -2,20 +2,22 @@ import { Injectable, UnprocessableEntityException } from '@nestjs/common';
 import { Not, ObjectLiteral } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 
-import { CreatePermissionDto } from 'src/permission/dto/create-permission.dto';
-import { UpdatePermissionDto } from 'src/permission/dto/update-permission.dto';
-import { PermissionRepository } from 'src/permission/permission.repository';
-import { PermissionFilterDto } from 'src/permission/dto/permission-filter.dto';
-import { CommonServiceInterface } from 'src/common/interfaces/common-service.interface';
-import { Permission } from 'src/permission/serializer/permission.serializer';
-import { PermissionEntity } from 'src/permission/entities/permission.entity';
-import { basicFieldGroupsForSerializing } from 'src/role/serializer/role.serializer';
-import { Pagination } from 'src/paginate';
+import { CommonServiceInterface } from '../common/interfaces/common-service.interface';
+import {
+  basicFieldGroupsForSerializing,
+  Permission
+} from './serializer/permission.serializer';
+import { PermissionRepository } from './permission.repository';
+import { CreatePermissionDto } from './dto/create-permission.dto';
+import { PermissionFilterDto } from './dto/permission-filter.dto';
+import { Pagination } from '../paginate';
+import { UpdatePermissionDto } from './dto/update-permission.dto';
+import { PermissionEntity } from './entities/permission.entity';
+import { LoadPermissionMisc } from './misc/load-permission.misc';
 import {
   PermissionConfiguration,
   RoutePayloadInterface
-} from 'src/config/permission-config';
-import { LoadPermissionMisc } from 'src/permission/misc/load-permission.misc';
+} from '../config/permission-config';
 
 @Injectable()
 export class PermissionsService

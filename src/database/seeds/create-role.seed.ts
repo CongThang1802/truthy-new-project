@@ -1,9 +1,8 @@
 import { Factory } from 'typeorm-seeding';
 import { DataSource } from 'typeorm';
-
-import { RoleEntity } from 'src/role/entities/role.entity';
-import { PermissionConfiguration } from 'src/config/permission-config';
-import { PermissionEntity } from 'src/permission/entities/permission.entity';
+import { PermissionConfiguration } from '../../config/permission-config';
+import { RoleEntity } from '../../role/entities/role.entity';
+import { PermissionEntity } from '../../permission/entities/permission.entity';
 
 export default class CreateRoleSeed {
   public async run(factory: Factory, datasource: DataSource): Promise<any> {

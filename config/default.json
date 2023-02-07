@@ -18,9 +18,9 @@
   },
   "app": {
     "fallbackLanguage": "en",
-    "name": "Truthy",
+    "name": "GreenApp",
     "version": "v0.1",
-    "description": "Official Truthy API",
+    "description": "Official GreenApp API",
     "appUrl": "http://localhost:7777",
     "frontendUrl": "http://localhost:3000",
     "sameSite": true

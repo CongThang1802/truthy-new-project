@@ -36,9 +36,12 @@ export default {
         format: winston.format.combine(
           winston.format.timestamp(),
           winston.format.ms(),
-          nestWinstonModuleUtilities.format.nestLike('Truthy Logger', {
-            prettyPrint: true
-          })
+          nestWinstonModuleUtilities.format.nestLike(
+            `${process.env.APP_NAME}`,
+            {
+              prettyPrint: true
+            }
+          )
         )
       })
 } as WinstonModuleOptions;

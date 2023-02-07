@@ -1,6 +1,5 @@
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
-
-import { ModelSerializer } from 'src/common/serializer/model.serializer';
+import { ModelSerializer } from '../../common/serializer/model.serializer';
 
 export class EmailTemplate extends ModelSerializer {
   id: number;

@@ -4,10 +4,9 @@ import {
   ApiProperty,
   ApiPropertyOptional
 } from '@nestjs/swagger';
-
-import { ModelSerializer } from 'src/common/serializer/model.serializer';
-import { UserStatusEnum } from 'src/auth/user-status.enum';
-import { RoleSerializer } from 'src/role/serializer/role.serializer';
+import { ModelSerializer } from '../../common/serializer/model.serializer';
+import { UserStatusEnum } from '../user-status.enum';
+import { RoleSerializer } from '../../role/serializer/role.serializer';
 
 export const adminUserGroupsForSerializing: string[] = ['admin'];
 export const ownerUserGroupsForSerializing: string[] = ['owner'];

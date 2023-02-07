@@ -1,6 +1,5 @@
 import * as bcrypt from 'bcrypt';
-
-import { UserEntity } from 'src/auth/entity/user.entity';
+import { UserEntity } from '../../../../src/auth/entity/user.entity';
 
 describe('test validate password', () => {
   let user: UserEntity;

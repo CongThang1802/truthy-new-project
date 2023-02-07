@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { AuthService } from 'src/auth/auth.service';
-import { DashboardService } from 'src/dashboard/dashboard.service';
+import { DashboardService } from '../../../src/dashboard/dashboard.service';
+import { AuthService } from '../../../src/auth/auth.service';
 
 const authServiceMock = () => ({
   countByCondition: jest.fn(),

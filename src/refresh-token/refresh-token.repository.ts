@@ -1,10 +1,9 @@
 import { EntityRepository } from 'typeorm';
 import * as config from 'config';
-
-import { RefreshToken } from 'src/refresh-token/entities/refresh-token.entity';
-import { UserSerializer } from 'src/auth/serializer/user.serializer';
-import { BaseRepository } from 'src/common/repository/base.repository';
-import { RefreshTokenSerializer } from 'src/refresh-token/serializer/refresh-token.serializer';
+import { RefreshToken } from './entities/refresh-token.entity';
+import { BaseRepository } from '../common/repository/base.repository';
+import { RefreshTokenSerializer } from './serializer/refresh-token.serializer';
+import { UserSerializer } from '../auth/serializer/user.serializer';
 
 const tokenConfig = config.get<any>('jwt');
 @EntityRepository(RefreshToken)

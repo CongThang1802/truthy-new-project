@@ -1,11 +1,11 @@
-import { UserEntity } from 'src/auth/entity/user.entity';
-
 /**
  * sanitize user fields
  * @param userField
  * @param strong
  * @constructor
  */
+import { UserEntity } from '../../auth/entity/user.entity';
+
 export const SanitizeUser = (userField?: string, strong = true) => {
   return (
     target: any,

@@ -1,20 +1,19 @@
 import { Injectable, UnprocessableEntityException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Not, ObjectLiteral } from 'typeorm';
-
-import { NotFoundException } from 'src/exception/not-found.exception';
-import { CreateRoleDto } from 'src/role/dto/create-role.dto';
-import { UpdateRoleDto } from 'src/role/dto/update-role.dto';
-import { RoleRepository } from 'src/role/role.repository';
-import { RoleFilterDto } from 'src/role/dto/role-filter.dto';
+import { RoleRepository } from './role.repository';
+import { CreateRoleDto } from './dto/create-role.dto';
+import { RoleFilterDto } from './dto/role-filter.dto';
+import { UpdateRoleDto } from './dto/update-role.dto';
+import { NotFoundException } from '../exception/not-found.exception';
+import { CommonServiceInterface } from '../common/interfaces/common-service.interface';
 import {
   adminUserGroupsForSerializing,
   basicFieldGroupsForSerializing,
   RoleSerializer
-} from 'src/role/serializer/role.serializer';
-import { CommonServiceInterface } from 'src/common/interfaces/common-service.interface';
-import { PermissionsService } from 'src/permission/permissions.service';
-import { Pagination } from 'src/paginate';
+} from './serializer/role.serializer';
+import { PermissionsService } from '../permission/permissions.service';
+import { Pagination } from '../paginate';
 
 @Injectable()
 export class RolesService implements CommonServiceInterface<RoleSerializer> {

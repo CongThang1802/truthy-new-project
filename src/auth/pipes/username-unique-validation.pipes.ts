@@ -3,8 +3,7 @@ import {
   ValidatorConstraintInterface
 } from 'class-validator';
 import { Injectable } from '@nestjs/common';
-
-import { AuthService } from 'src/auth/auth.service';
+import { AuthService } from '../auth.service';
 
 @ValidatorConstraint({ async: true })
 @Injectable()

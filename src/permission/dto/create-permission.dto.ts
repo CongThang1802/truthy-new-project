@@ -5,10 +5,9 @@ import {
   MaxLength,
   Validate
 } from 'class-validator';
-
-import { MethodList } from 'src/config/permission-config';
-import { UniqueValidatorPipe } from 'src/common/pipes/unique-validator.pipe';
-import { PermissionEntity } from 'src/permission/entities/permission.entity';
+import { MethodList } from '../../config/permission-config';
+import { UniqueValidatorPipe } from '../../common/pipes/unique-validator.pipe';
+import { PermissionEntity } from '../entities/permission.entity';
 
 const methodListArray = [
   MethodList.GET,

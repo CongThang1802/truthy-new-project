@@ -1,12 +1,11 @@
 import { Test } from '@nestjs/testing';
-
-import { UserRepository } from 'src/auth/user.repository';
-import { CreateUserDto } from 'src/auth/dto/create-user.dto';
-import { UserLoginDto } from 'src/auth/dto/user-login.dto';
-import { UserEntity } from 'src/auth/entity/user.entity';
-import { UserStatusEnum } from 'src/auth/user-status.enum';
-import { StatusCodesList } from 'src/common/constants/status-codes-list.constants';
-import { ExceptionTitleList } from 'src/common/constants/exception-title-list.constants';
+import { UserStatusEnum } from '../../../src/auth/user-status.enum';
+import { UserRepository } from '../../../src/auth/user.repository';
+import { CreateUserDto } from '../../../src/auth/dto/create-user.dto';
+import { UserLoginDto } from '../../../src/auth/dto/user-login.dto';
+import { UserEntity } from '../../../src/auth/entity/user.entity';
+import { ExceptionTitleList } from '../../../src/common/constants/exception-title-list.constants';
+import { StatusCodesList } from '../../../src/common/constants/status-codes-list.constants';
 
 const mockUser = {
   roleId: 1,

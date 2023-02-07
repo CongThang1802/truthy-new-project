@@ -7,9 +7,8 @@ import {
   Validate,
   ValidateIf
 } from 'class-validator';
-
-import { UniqueValidatorPipe } from 'src/common/pipes/unique-validator.pipe';
-import { RoleEntity } from 'src/role/entities/role.entity';
+import { UniqueValidatorPipe } from '../../common/pipes/unique-validator.pipe';
+import { RoleEntity } from '../entities/role.entity';
 
 export class CreateRoleDto {
   @IsNotEmpty()
